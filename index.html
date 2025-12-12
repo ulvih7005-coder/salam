@@ -3,90 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SoulGoodMan - Professional Portfolio</title>
+    <title>Əsas Səhifə | Sizin Adınız Portfoliosu</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <div class="container">
-            <h1>Sizin Adınız</h1>
+            <h1><a href="index.html">Portfolio</a></h1>
             <nav>
                 <ul>
-                    <li><a href="#home">Əsas Səhifə</a></li>
-                    <li><a href="#about">Haqqımda</a></li>
-                    <li><a href="#projects">Layihələr</a></li>
-                    <li><a href="#contact">Əlaqə</a></li>
+                    <li><a href="index.html" class="active">Əsas Səhifə</a></li>
+                    <li><a href="projects.html">Layihələr</a></li>
+                    <li><a href="blog.html">Bloq</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section id="home" class="hero">
-            <div class="container">
-                <h2>Salam, Mən <span class="highlight">SoulGoodMan</span>!</h2>
-                <p>Mən Veb Developer (və ya ixtisasınızı yazın) olaraq, effektiv və istifadəçi dostu həllər yaratmaqda ixtisaslaşıram.</p>
-                <a href="#projects" class="btn">Layihələrimə Bax</a>
-            </div>
-        </section>
-
         <section id="about" class="about">
-            <div class="container">
-                <h2>Haqqımda</h2>
-                <p>Mən (Təcrübə İlinizi Yazın) illik təcrübəyə malik (İxtisasınızı Yazın) mütəxəssisiyəm. Əsasən **HTML, CSS (və ya Frameworklər), JavaScript** (və ya digər bacarıqlarınızı) ilə işləyirəm.</p>
-                <div class="skills">
-                    <h3>Bacarıqlar:</h3>
-                    <ul>
-                        <li>HTML5 & CSS3</li>
-                        <li>JavaScript (React/Vue/Node.js)</li>
-                        <li>Git & GitHub</li>
-                        <li>Responsiv Dizayn</li>
-                        <li>Verilənlər Bazasının İdarə Edilməsi</li>
-                        </ul>
-                </div>
+            <div class="container card">
+                <h2>Haqqımda Məlumat</h2>
+                <p>Salam, mən **[Adınız Soyadınız]**! Mən [İxtisasınız] üzrə təcrübəli mütəxəssisəm. Bu portfolio saytı vasitəsilə təhsilimi, peşəkar təcrübəmi və maraqlı layihələrimi sizə təqdim edirəm.</p>
+                <p>Texnologiyalara olan sevgim və daim öyrənməyə həvəsim sayəsində, həmişə yeni və effektiv həll yolları yaratmağa çalışıram.</p>
             </div>
         </section>
 
-        <section id="projects" class="projects">
-            <div class="container">
-                <h2>Seçilmiş Layihələr</h2>
+        <section id="education">
+            <div class="container card">
+                <h2>Təhsil</h2>
                 
-                <div class="project-item">
-                    <h3>Layihə Başlığı 1: E-Ticarət Saytı</h3>
-                    <p>Müştərilərin məhsulları nəzərdən keçirə və sifariş edə biləcəyi funksional e-ticarət platforması.</p>
-                    <p class="tech-used">İstifadə olunan Texnologiyalar: **React, Node.js, MongoDB**</p>
-                    <a href="GitHub-repo-linki" target="_blank" class="project-link">GitHub</a>
-                    <a href="Canli-demo-linki" target="_blank" class="project-link">Canlı Demo</a>
+                <div class="experience-item">
+                    <h3>[Universitetin Adı] - [İxtisasınız]</h3>
+                    <p>_2018 - 2022_</p>
+                    <p>Mühəndislik (və ya digər) fakültəsində bakalavr dərəcəsi. Əsas diqqət [Mövzu] üzərində cəmlənmişdir.</p>
                 </div>
-
-                <div class="project-item">
-                    <h3>Layihə Başlığı 2: Hava Proqnozu Tətbiqi</h3>
-                    <p>API-lərdən istifadə edərək real vaxt rejimində hava məlumatlarını göstərən tətbiq.</p>
-                    <p class="tech-used">İstifadə olunan Texnologiyalar: **Vanilla JavaScript, HTML, CSS, Fetch API**</p>
-                    <a href="GitHub-repo-linki" target="_blank" class="project-link">GitHub</a>
+                
+                <div class="experience-item">
+                    <h3>[Məktəbin Adı]</h3>
+                    <p>_2007 - 2018_</p>
+                    <p>Orta təhsilimi burada bitirmişəm.</p>
                 </div>
-
-                </div>
+            </div>
         </section>
-
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2>Mənimlə Əlaqə</h2>
-                <p>İş təklifləri və ya əməkdaşlıq üçün mənimlə əlaqə saxlamaqdan çəkinməyin.</p>
-                <p>Email: <a href="mailto:SizinEmailiniz@example.com">SizinEmailiniz@example.com</a></p>
-                <p>LinkedIn: <a href="Sizin-LinkedIn-Linkiniz" target="_blank">LinkedIn Profilim</a></p>
+        
+        <section id="experience">
+            <div class="container card">
+                <h2>Peşəkar Təcrübə</h2>
+                
+                <div class="experience-item">
+                    <h3>[Şirkətin Adı] - [Vəzifə]</h3>
+                    <p>_Yanvar 2023 - İndiyə qədər_</p>
+                    <ul>
+                        <li>[Vəzifə öhdəliyi 1]</li>
+                        <li>[Vəzifə öhdəliyi 2]</li>
+                        <li>[Vəzifə öhdəliyi 3]</li>
+                    </ul>
                 </div>
-        </section>
 
+                <div class="experience-item">
+                    <h3>[Şirkətin Adı] - [Vəzifə]</h3>
+                    <p>_İyun 2022 - Dekabr 2022_</p>
+                    <p>Bu müddət ərzində [X] texnologiyaları ilə işləyən [Y] layihəsində iştirak etmişəm.</p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Sizin Adınız. Bütün Hüquqlar Qorunur.</p>
+            <p>Yaradılıb: [Sizin Adınız] &copy; 2025</p>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>

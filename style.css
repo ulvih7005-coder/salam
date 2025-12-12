@@ -1,4 +1,12 @@
-/* Əsas Sıfırlamalar */
+/* --- Global & Variables --- */
+:root {
+    --primary-color: #007bff; /* Mavi */
+    --secondary-color: #333; /* Tünd Boz */
+    --background-color: #f4f4f9; /* Açıq Fon */
+    --text-color: #333;
+    --font-family: 'Arial', sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,175 +14,153 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: var(--font-family);
     line-height: 1.6;
-    background-color: #f4f4f9; /* Açıq Boz Fon */
-    color: #333;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 .container {
-    width: 80%;
+    width: 90%;
+    max-width: 1200px;
     margin: auto;
     overflow: hidden;
 }
 
-/* Başlıq (Header) və Naviqasiya */
+/* --- Başlıq və Naviqasiya (Nav Menu) --- */
 header {
-    background: #333; /* Tünd Boz */
-    color: #fff;
-    padding-top: 20px;
-    min-height: 70px;
-    border-bottom: #007bff 3px solid; /* Mavi vurğu */
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    background: var(--secondary-color);
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-header h1 {
-    float: left;
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header nav {
-    float: right;
-    margin-top: 10px;
-}
-
-header ul {
-    list-style: none;
-}
-
-header ul li {
-    float: left;
-    display: inline;
-    padding: 0 20px 0 20px;
-}
-
-header a {
-    color: #fff;
+header h1 a {
+    color: white;
     text-decoration: none;
-    text-transform: uppercase;
-    font-size: 16px;
-    transition: color 0.3s;
+    font-size: 24px;
 }
 
-header a:hover {
-    color: #007bff; /* Mavi rəng */
+nav ul {
+    list-style: none;
+    display: flex;
 }
 
-/* Əsas Bölmələr */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 15px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background-color: var(--primary-color);
+    border-radius: 4px;
+}
+
+/* --- Əsas Məzmun Stilistikası --- */
 section {
-    padding: 80px 0;
-    text-align: center;
-}
-
-section:nth-child(even) {
-    background: #e2e2e8; /* Bir az daha tünd fon */
+    padding: 40px 0;
 }
 
 section h2 {
-    font-size: 36px;
+    color: var(--primary-color);
+    text-align: center;
     margin-bottom: 30px;
-    color: #007bff;
+    font-size: 32px;
 }
 
-/* Hero Bölməsi */
-.hero {
-    min-height: 400px;
-    background: #fff;
-    padding-top: 100px;
-}
-
-.hero h2 {
-    font-size: 48px;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.highlight {
-    color: #007bff;
-    font-weight: bold;
-}
-
-.btn {
-    display: inline-block;
-    color: #fff;
-    background: #007bff;
-    padding: 10px 20px;
-    margin-top: 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.btn:hover {
-    background: #0056b3;
-}
-
-/* Haqqımda Bölməsi */
-.skills ul {
-    list-style: none;
-    padding-top: 10px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.skills ul li {
-    background: #ddd;
-    margin: 5px;
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-size: 14px;
-}
-
-/* Layihələr Bölməsi */
-.project-item {
-    background: #fff;
+.card {
+    background: white;
     padding: 20px;
-    margin: 20px 0;
+    margin-bottom: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: left;
 }
 
-.project-item h3 {
-    color: #333;
+.card h3 {
+    color: var(--secondary-color);
     margin-bottom: 10px;
 }
 
-.tech-used {
-    color: #555;
-    font-size: 14px;
-    margin-bottom: 15px;
+/* --- Xüsusi Səhifə Stilisikaları --- */
+
+/* Home Page: Təhsil/Təcrübə */
+.experience-item {
+    border-left: 3px solid var(--primary-color);
+    padding-left: 20px;
+    margin-bottom: 25px;
 }
 
-.project-link {
-    display: inline-block;
-    margin-right: 15px;
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
+/* Blog Page: Məqalələr */
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
 
-.project-link:hover {
-    text-decoration: underline;
-}
-
-/* Əlaqə Bölməsi */
-.contact a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.contact a:hover {
-    text-decoration: underline;
-}
-
-/* Footer */
-footer {
-    background: #333;
-    color: #fff;
+/* Projects Page: Layihələr */
+.project-card {
+    border: 1px solid #ddd;
     text-align: center;
-    padding: 20px;
+}
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+}
+
+/* --- Footer --- */
+footer {
+    background: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
     margin-top: 30px;
+}
+
+/* ======================================= */
+/* --- RESPONSIV DİZAYN (Media Queries) --- */
+/* ======================================= */
+
+@media (max-width: 768px) {
+    /* Başlıq və Naviqasiyanın Dəyişməsi */
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column; /* Mobil cihazda menuyu alt-alta düzmək */
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+        width: 100%;
+    }
+    
+    nav ul li a {
+        display: block; /* Bütün sahəni tutmaq */
+        padding: 10px;
+        text-align: center;
+    }
+
+    /* Mətn Ölçülərinin Uyğunlaşdırılması */
+    section h2 {
+        font-size: 28px;
+    }
+    
+    /* Layihə/Bloq gridinin mobilə uyğunlaşdırılması */
+    .article-grid {
+        grid-template-columns: 1fr; /* 1 sütun */
+    }
 }
